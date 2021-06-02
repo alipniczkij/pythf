@@ -20,7 +20,4 @@ jobs:
           name: Running tests
           command: |
             . venv/bin/activate
-            pytest
-      - store_artifacts:
-          path: test-reports/
-          destination: pythf
+            py.test --pep8 && pytest
